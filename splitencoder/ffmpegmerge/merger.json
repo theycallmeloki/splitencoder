@@ -1,0 +1,16 @@
+{
+  "pipeline": {
+    "name": "merger"
+  },
+  "description": "A pipeline that merges chunks into a single video",
+  "input": {
+    "pfs": {
+      "glob": "/*/",
+      "repo": "converter"
+    }
+  },
+  "transform": {
+    "cmd": ["python3", "/merger.py"],
+    "image": "laneone/ffmpegmerger"
+  }
+}

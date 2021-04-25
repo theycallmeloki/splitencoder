@@ -1,0 +1,1 @@
+pachctl update pipeline -f merger.json --build --username laneone --reprocess

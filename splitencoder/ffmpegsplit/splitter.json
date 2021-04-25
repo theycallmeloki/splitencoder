@@ -1,0 +1,16 @@
+{
+  "pipeline": {
+    "name": "splitter"
+  },
+  "description": "A pipeline that splits videos into chunks",
+  "input": {
+    "pfs": {
+      "glob": "/*",
+      "repo": "videos"
+    }
+  },
+  "transform": {
+    "cmd": ["python3", "/splitter.py"],
+    "image": "laneone/ffmpegsplitter"
+  }
+}

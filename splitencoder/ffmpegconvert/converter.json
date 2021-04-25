@@ -1,0 +1,16 @@
+{
+  "pipeline": {
+    "name": "converter"
+  },
+  "description": "A pipeline that converts chunks into encoded chunks",
+  "input": {
+    "pfs": {
+      "glob": "/*/*",
+      "repo": "splitter"
+    }
+  },
+  "transform": {
+    "cmd": ["python3", "/converter.py"],
+    "image": "laneone/ffmpegconverter"
+  }
+}

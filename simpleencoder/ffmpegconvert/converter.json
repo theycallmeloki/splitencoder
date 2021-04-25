@@ -1,0 +1,16 @@
+{
+  "pipeline": {
+    "name": "converter"
+  },
+  "description": "A pipeline that encodes videos",
+  "input": {
+    "pfs": {
+      "glob": "/*",
+      "repo": "videos"
+    }
+  },
+  "transform": {
+    "cmd": ["python3", "/converter.py"],
+    "image": "laneone/ffmpegconverterstandalone"
+  }
+}

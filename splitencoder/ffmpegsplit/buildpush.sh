@@ -1,0 +1,1 @@
+pachctl update pipeline -f splitter.json --build --username laneone --reprocess
